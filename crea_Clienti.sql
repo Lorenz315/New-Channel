@@ -1,0 +1,6 @@
+CREATE TABLE Clienti 
+( ID_cliente INT(5) NOT NULL AUTO_INCREMENT,
+nome CHAR (20) NOT NULL,
+indirizzo CHAR(30) NOT NULL, 
+PRIMARY KEY(ID_cliente))
+TYPE=INNODB;

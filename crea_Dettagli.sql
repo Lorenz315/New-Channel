@@ -1,0 +1,11 @@
+CREATE TABLE Dettagli 
+(ID_dettaglio INT (5) UNSIGNED NOT NULL AUTO_INCREMENT,
+id_ordine INT(5) NOT NULL,
+id_merce INT (5) NOT NULL,
+quantità INT (5) UNSIGNED DEFAULT '0' NOT NULL,
+PRIMARY KEY(ID_dettaglio),
+INDEX(id_ordine),
+FOREIGN KEY(id_ordine) REFERENCES Ordini(ID_ordine) ON DELETE RESTRICT,
+INDEX(id_merce),
+FOREIGN KEY(id_merce) REFERENCES Merci(ID_merce) ON DELETE RESTRICT)
+TYPE=INNODB; 
